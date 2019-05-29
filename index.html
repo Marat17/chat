@@ -19,8 +19,9 @@
 
 <div class = 'topline'>
   <div class = 'my_account'>
+    <div class = 'circle'></div>
     <div class = 'account_picker'>
-      Some picker &blacktriangledown;
+      <span class = 'text'>Some picker</span> <span>&blacktriangledown;</span>
     </div>
 
     <div class = 'plussign'>
@@ -39,8 +40,8 @@
         <div>@projecthunter</div>
       </div>
     <div class='options'>
-      <i class="fas fa-video"></i>
-      <i class="fas fa-phone"></i>
+      <i class="fas fa-video blue"></i>
+      <i class="fas fa-phone blue"></i>
       <i class="fas fa-search"></i>
       <i class="fas fa-ellipsis-h"></i>
     </div>
@@ -59,7 +60,8 @@
     </div>
 
     <div class = 'contacts'>
-
+      <div class = 'dropdown'>Dropdown &blacktriangledown;</div>
+      <div class = 'addcontact'>Add Contact</div>
     </div>
 
     <div class = 'my_chats'>
@@ -73,6 +75,7 @@
             Sent you a file
           </div>
         </div>
+        <div class = 'time'>18:05</div>
       </div>
       <div class= 'chat'>
         <div class = 'chatimage' style="background-image: url(media/pic.jpg);"></div>
@@ -84,6 +87,7 @@
             Sent you a file
           </div>
         </div>
+        <div class = 'time'>16:31</div>
       </div>
       <div class= 'chat'>
         <div class = 'chatimage' style="background-image: url(media/pic.jpg);"></div>
@@ -95,6 +99,7 @@
             Sent you a file
           </div>
         </div>
+        <div class = 'time'>16:23</div>
       </div>
       <div class= 'chat'>
         <div class = 'chatimage' style="background-image: url(media/pic.jpg);"></div>
@@ -106,6 +111,7 @@
             Sent you a file
           </div>
         </div>
+        <div class = 'time'>14:48</div>
       </div>
       <div class= 'chat'>
         <div class = 'chatimage' style="background-image: url(media/pic.jpg);"></div>
@@ -117,17 +123,7 @@
             Sent you a file
           </div>
         </div>
-      </div>
-      <div class= 'chat'>
-        <div class = 'chatimage' style="background-image: url(media/pic.jpg);"></div>
-        <div class = 'nameandmessage'>
-          <div class = 'chatname'>
-            Winnie Silva
-          </div>
-          <div class = 'lastmessage'>
-            Sent you a file
-          </div>
-        </div>
+        <div class = 'time'>9:14</div>
       </div>
     </div>
   </div>
@@ -137,13 +133,19 @@
 
         <div class="chat__messages">
           <div class="chat__message">
-            <div class="chat__message-time">9:03</div>
+            <div class="timeandinterlocutor">
+              <span>@projecthunter</span>
+              <span>9:03</span>
+            </div>
             <div class="chat__message-content">Hi</div>
           </div>
 
           <div class="chat__message">
-            <div class="chat__message-time">9:03</div>
-            <div class="chat__message-content">How are you?</div>
+            <div class="timeandinterlocutor">
+              <span>@projecthunter</span>
+              <span>9:04</span>
+            </div>
+            <div class="chat__message-content">What's up?</div>
           </div>
         </div>
       </div>
@@ -152,19 +154,28 @@
 
         <div class="chat__messages">
           <div class="chat__message">
-            <div class="chat__message-time">9:05</div>
-            <div class="chat__message-content">Hello</div>
+            <div class="timeandinterlocutor">
+              <span>@Michael</span>
+              <span>9:11</span>
+            </div>
+            <div class="chat__message-content">Hey</div>
           </div>
 
           <div class="chat__message">
-            <div class="chat__message-time">9:07</div>
-            <div class="chat__message-content">I'm fine. Let's have a dinner today.</div>
+            <div class="timeandinterlocutor">
+              <span>@Michael</span>
+              <span>9:11</span>
+            </div>
+            <div class="chat__message-content">I am kind of busy right now, rushing to a meeting</div>
           </div>
 
           <div class="chat__message">
-            <div class="chat__message-time">9:07</div>
-            <div class="chat__message-content">What do you think about it?           </div>
-        </div>
+            <div class="timeandinterlocutor">
+              <span>@Michael</span>
+              <span>9:12</span>
+            </div>
+            <div class="chat__message-content">I'll text u later</div>
+          </div>
       </div>
     </div>
 
@@ -189,7 +200,7 @@
         +3538340384
       </div>
 
-      <div class = 'datacontainer'>
+      <div class = 'datacontainer email'>
         thatisanemail@hotmail.com
       </div>
 
