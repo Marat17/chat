@@ -1,0 +1,204 @@
+:root {
+  --background-color: green;
+  --secondary-color: blue;
+  --secondary-light-color: #ADD8E6;
+}
+
+body {
+  background-color: var(--background-color);
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.topline {
+  height: 100px;
+  background-color: grey;
+  display: flex;
+  flex-direction: row;
+
+  .my_account {
+    display: flex;
+    width: 30%;
+    height: inherit;
+    border-right: solid black;
+    justify-content: space-around;
+    align-items: center;
+
+    .account_picker {
+      border-radius: 20px;
+      border-width: 2px;
+      border-color: black;
+      border-style: solid;
+      height: 40px;
+      width: 240px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    .plussign {
+      border-radius: 20px;
+      border-width: 2px;
+      border-color: black;
+      border-style: solid;
+      height: 40px;
+      width: 40px;
+      font-size: 24px;
+      text-align: center;
+      vertical-align: bottom;
+    }
+  }
+
+  .chosen_chat_info {
+    display: flex;
+    background-color: red;
+    width: 70%;
+    justify-content: space-between;
+
+    .nameandstatus {
+      display: flex;
+
+      .interlocutor_name {
+        font-size: 14px;
+      }
+
+        .status {
+          margin-left: 10px;
+
+          i {
+            color: green;
+          }
+        }
+    }
+  }
+}
+
+.mainpart {
+  display: flex;
+  flex-direction: row;
+
+  .left_column {
+    width: 30%;
+    background-color: black;
+    height: 100%;
+
+    .picker {
+      height: 50px;
+      background-color: white;
+      border-right: solid black;
+      display: flex;
+      justify-content: space-between;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      i {
+        font-size: 50px;
+      }
+    }
+
+    .contacts {
+      height: 40px;
+    }
+
+    .my_chats {
+      display: flex;
+      flex-direction: column;
+      border-right: solid black;
+
+      .chat {
+        padding: 10px;
+        border-top: solid grey;
+        height: 80px;
+        background-color: blue;
+      }
+    }
+  }
+
+  .chat_space{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .chat__item {
+      display: flex;
+      align-items: flex-start;
+
+      .chat__person-avatar {
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+      }
+
+    .chat__messages {
+      margin-left: 10px;
+
+        .chat__message {
+          display: flex;
+          align-items: center;
+          margin-right: 10px;
+
+          .chat__message-content {
+            border-radius: 5px;
+            padding: 7px;
+            background-color: #ccc;
+            display: inline-block;
+
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+
+    .chat__item--responder {
+      flex-direction: row-reverse;
+
+      .chat__message {
+        flex-direction: row-reverse;
+      }
+
+      .chat__message-content {
+        margin-left: 0;
+        margin-right: 5px;
+      }
+    }
+
+    .messageplace {
+      margin-top: 20px;
+      border: solid grey;
+      height: 45px;
+      border-radius: 20px;
+      width: 80%;
+    }
+  }
+
+  .interlocutor {
+    width: 25%;
+    background-color: grey;
+
+    .profilepic {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      width: 100%;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        border-radius: 50%;
+        height: 150px;
+        width: 150px;
+
+      }
+
+    }
+    .personaldata {
+
+    }
+  }
+}

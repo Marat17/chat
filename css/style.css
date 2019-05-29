@@ -1,0 +1,173 @@
+:root {
+  --background-color: green;
+  --secondary-color: blue;
+  --secondary-light-color: #ADD8E6;
+}
+
+body {
+  background-color: var(--background-color);
+  padding: 0;
+  margin: 0;
+}
+
+div {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.topline {
+  height: 100px;
+  background-color: grey;
+  display: flex;
+  flex-direction: row;
+}
+.topline .my_account {
+  display: flex;
+  width: 30%;
+  height: inherit;
+  border-right: solid black;
+  justify-content: space-around;
+  align-items: center;
+}
+.topline .my_account .account_picker {
+  border-radius: 20px;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  height: 40px;
+  width: 240px;
+  text-align: center;
+  font-size: 24px;
+}
+.topline .my_account .plussign {
+  border-radius: 20px;
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  height: 40px;
+  width: 40px;
+  font-size: 24px;
+  text-align: center;
+  vertical-align: bottom;
+}
+.topline .chosen_chat_info {
+  display: flex;
+  background-color: red;
+  width: 70%;
+  justify-content: space-between;
+}
+.topline .chosen_chat_info .nameandstatus {
+  display: flex;
+}
+.topline .chosen_chat_info .nameandstatus .interlocutor_name {
+  font-size: 14px;
+}
+.topline .chosen_chat_info .nameandstatus .status {
+  margin-left: 10px;
+}
+.topline .chosen_chat_info .nameandstatus .status i {
+  color: green;
+}
+
+.mainpart {
+  display: flex;
+  flex-direction: row;
+}
+.mainpart .left_column {
+  width: 30%;
+  background-color: black;
+  height: 100%;
+}
+.mainpart .left_column .picker {
+  height: 50px;
+  background-color: white;
+  border-right: solid black;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.mainpart .left_column .picker i {
+  font-size: 50px;
+}
+.mainpart .left_column .contacts {
+  height: 40px;
+}
+.mainpart .left_column .my_chats {
+  display: flex;
+  flex-direction: column;
+  border-right: solid black;
+}
+.mainpart .left_column .my_chats .chat {
+  padding: 10px;
+  border-top: solid grey;
+  height: 80px;
+  background-color: blue;
+}
+.mainpart .chat_space {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.mainpart .chat_space .chat__item {
+  display: flex;
+  align-items: flex-start;
+}
+.mainpart .chat_space .chat__item .chat__person-avatar {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+.mainpart .chat_space .chat__item .chat__messages {
+  margin-left: 10px;
+}
+.mainpart .chat_space .chat__item .chat__messages .chat__message {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+.mainpart .chat_space .chat__item .chat__messages .chat__message .chat__message-content {
+  border-radius: 5px;
+  padding: 7px;
+  background-color: #ccc;
+  display: inline-block;
+  margin-left: 5px;
+}
+.mainpart .chat_space .chat__item--responder {
+  flex-direction: row-reverse;
+}
+.mainpart .chat_space .chat__item--responder .chat__message {
+  flex-direction: row-reverse;
+}
+.mainpart .chat_space .chat__item--responder .chat__message-content {
+  margin-left: 0;
+  margin-right: 5px;
+}
+.mainpart .chat_space .messageplace {
+  margin-top: 20px;
+  border: solid grey;
+  height: 45px;
+  border-radius: 20px;
+  width: 80%;
+}
+.mainpart .interlocutor {
+  width: 25%;
+  background-color: grey;
+}
+.mainpart .interlocutor .profilepic {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainpart .interlocutor .profilepic img {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+}
+
+/*# sourceMappingURL=style.css.map */
