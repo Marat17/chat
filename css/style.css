@@ -1,7 +1,8 @@
 :root {
-  --background-color: green;
-  --secondary-color: blue;
-  --secondary-light-color: #ADD8E6;
+  --background-color: white;
+  --secondary-color: #3e92cc;
+  --chat-background-color: #f4f5f7;
+  --secondary-light-color: #539fd2;
 }
 
 body {
@@ -17,7 +18,7 @@ div {
 
 .topline {
   height: 100px;
-  background-color: grey;
+  border-bottom: solid grey;
   display: flex;
   flex-direction: row;
 }
@@ -25,7 +26,7 @@ div {
   display: flex;
   width: 30%;
   height: inherit;
-  border-right: solid black;
+  border-right: solid grey;
   justify-content: space-around;
   align-items: center;
 }
@@ -52,21 +53,31 @@ div {
 }
 .topline .chosen_chat_info {
   display: flex;
-  background-color: red;
+  align-items: flex-end;
   width: 70%;
   justify-content: space-between;
+  padding: 15px;
+  margin-bottom: 10px;
 }
-.topline .chosen_chat_info .nameandstatus {
+.topline .chosen_chat_info .info {
+  display: flex;
+  flex-direction: column;
+}
+.topline .chosen_chat_info .info .nameandstatus {
   display: flex;
 }
-.topline .chosen_chat_info .nameandstatus .interlocutor_name {
+.topline .chosen_chat_info .info .nameandstatus .interlocutor_name {
   font-size: 14px;
 }
-.topline .chosen_chat_info .nameandstatus .status {
+.topline .chosen_chat_info .info .nameandstatus .status {
   margin-left: 10px;
 }
-.topline .chosen_chat_info .nameandstatus .status i {
-  color: green;
+.topline .chosen_chat_info .info .nameandstatus .status i {
+  color: #51cb20;
+}
+.topline .chosen_chat_info .options i {
+  font-size: 30px;
+  padding: 10px;
 }
 
 .mainpart {
@@ -75,20 +86,30 @@ div {
 }
 .mainpart .left_column {
   width: 30%;
-  background-color: black;
   height: 100%;
+  padding-bottom: 20px;
+  border-right: solid grey;
 }
 .mainpart .left_column .picker {
-  height: 50px;
-  background-color: white;
-  border-right: solid black;
+  height: 70px;
+  background-color: #f3f3f5;
   display: flex;
   justify-content: space-between;
   padding-left: 20px;
   padding-right: 20px;
 }
 .mainpart .left_column .picker i {
+  display: flex;
+  justify-content: center;
   font-size: 50px;
+  width: 100%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: solid #f3f3f5;
+}
+.mainpart .left_column .picker i:hover {
+  border-bottom: solid blue;
+  color: blue;
 }
 .mainpart .left_column .contacts {
   height: 40px;
@@ -96,19 +117,39 @@ div {
 .mainpart .left_column .my_chats {
   display: flex;
   flex-direction: column;
-  border-right: solid black;
 }
 .mainpart .left_column .my_chats .chat {
   padding: 10px;
-  border-top: solid grey;
   height: 80px;
-  background-color: blue;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.mainpart .left_column .my_chats .chat:hover {
+  background-color: var(--secondary-light-color);
+}
+.mainpart .left_column .my_chats .chat .nameandmessage {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+.mainpart .left_column .my_chats .chat .nameandmessage .lastmessage {
+  padding-top: 5px;
+}
+.mainpart .left_column .my_chats .chat .chatimage {
+  background-size: cover;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
 }
 .mainpart .chat_space {
   width: 45%;
   display: flex;
+  border-right: solid grey;
+  padding-bottom: 20px;
   flex-direction: column;
   justify-content: flex-end;
+  background-color: var(--chat-background-color);
 }
 .mainpart .chat_space .chat__item {
   display: flex;
@@ -144,7 +185,12 @@ div {
   margin-left: 0;
   margin-right: 5px;
 }
-.mainpart .chat_space .messageplace {
+.mainpart .chat_space .messagecontainer {
+  display: flex;
+  justify-content: center;
+}
+.mainpart .chat_space .messagecontainer .messageplace {
+  padding-left: 10px;
   margin-top: 20px;
   border: solid grey;
   height: 45px;
@@ -153,7 +199,6 @@ div {
 }
 .mainpart .interlocutor {
   width: 25%;
-  background-color: grey;
 }
 .mainpart .interlocutor .profilepic {
   padding-top: 20px;
@@ -164,10 +209,37 @@ div {
   align-items: center;
   justify-content: center;
 }
-.mainpart .interlocutor .profilepic img {
+.mainpart .interlocutor .profilepic .image {
+  background-size: cover;
   border-radius: 50%;
   height: 150px;
   width: 150px;
+}
+.mainpart .interlocutor .personaldata .nameandposition {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  padding: 15px;
+  border-bottom: solid grey;
+}
+.mainpart .interlocutor .personaldata .nameandposition span i {
+  padding-left: 5px;
+  color: #51cb20;
+}
+.mainpart .interlocutor .personaldata .datacontainer {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 15px;
+  border-bottom: solid grey;
+}
+.mainpart .interlocutor .sharedfiles {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
