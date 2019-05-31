@@ -3,6 +3,7 @@
   --secondary-color: #3e92cc;
   --secondary-light-color: #f0f7fb;
   --chat-background-color: #f4f5f7;
+  --borders-color: #e3eaf1;
 }
 
 body {
@@ -20,7 +21,7 @@ div {
 
 .topline {
   height: 10vh;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid var(--borders-color);
   display: flex;
   flex-direction: row;
 
@@ -29,11 +30,12 @@ div {
     justify-content: center;
     width: 30%;
     height: inherit;
-    border-right: 1px solid grey;
+    border-right: 1px solid var(--borders-color);
     align-items: center;
 
     .circle {
-      background-color: black;
+      background-size: cover;
+      background-position: center;
       border-radius: 50%;
       height: 50px;
       min-width: 50px;
@@ -46,10 +48,11 @@ div {
       justify-content: space-between;
       align-items: center;
       border-radius: 20px;
-      border: 1px solid grey;
+      border: 1px solid var(--borders-color);
       height: 40px;
       width: 240px;
-      font-size: 24px;
+      font-size: 18px;
+      color: grey;
       margin-right: 10px;
 
       &:hover {
@@ -61,7 +64,7 @@ div {
       }
 
       .text {
-        padding-left: 30px;
+        padding-left: 40px;
       }
     }
 
@@ -70,8 +73,9 @@ div {
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      border: 1px solid grey;
+      border: 1px solid var(--borders-color);
       height: 40px;
+      color: grey;
       min-width: 40px;
       font-size: 18px;
       margin-right: 20px;
@@ -125,6 +129,7 @@ div {
       i {
         font-size: 20px;
         padding: 10px;
+        color: grey;
 
         &:hover {
           cursor: pointer;
@@ -147,7 +152,7 @@ div {
   .left_column {
     width: 30%;
     padding-bottom: 20px;
-    border-right: 1px solid grey;
+    border-right: 1px solid var(--borders-color);
 
     .picker {
       height: 70px;
@@ -160,7 +165,9 @@ div {
       i {
         display: flex;
         justify-content: center;
-        font-size: 50px;
+        align-items: center;
+        font-size: 28px;
+        color: grey;
         width: 100%;
         padding-bottom: 10px;
         padding-top: 10px;
@@ -211,7 +218,7 @@ div {
       }
 
       .addcontact {
-        border: 1px solid grey;
+        border: 1px solid var(--borders-color);
         border-radius: 2px;
         display: flex;
         justify-content: center;
@@ -235,6 +242,10 @@ div {
 
       .chosen {
         background-color: var(--secondary-light-color);
+
+        .chatname {
+          color: var(--secondary-color);
+        }
       }
 
       .chat {
@@ -243,6 +254,10 @@ div {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
+
+        .lastmessage {
+          color: grey;
+        }
 
         i {
           color: transparent;
@@ -292,7 +307,7 @@ div {
   .chat_space{
     width: 45%;
     display: flex;
-    border-right: 1px solid grey;
+    border-right: 1px solid var(--borders-color);
     padding-bottom: 20px;
     flex-direction: column;
     justify-content: flex-end;
@@ -377,16 +392,35 @@ div {
         align-items: center;
         margin-top: 5px;
         padding-left: 10px;
-        border: 1px solid grey;
+        border: 1px solid var(--borders-color);
         height: 45px;
         border-radius: 20px;
         width: 80%;
         background-color: white;
 
         input {
-          border: 0px;
-          padding-left: 10px;
+          border: 0;
+          margin-left: 15px;
+          margin-right: 15px;
+          width: 100%;
         }
+
+        i {
+          padding-right: 15px;
+          border-right: 2px solid var(--borders-color);
+          color: grey;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        .righticon {
+          padding-right: 10px;
+          padding-left: 15px;
+          border: 0;
+        }
+
       }
     }
   }
@@ -433,7 +467,7 @@ div {
         justify-content: center;
         height: 60px;
         padding: 15px;
-        border-bottom: 1px solid grey;
+        border-bottom: 1px solid var(--borders-color);
 
         .position {
           color: grey;
@@ -453,7 +487,7 @@ div {
         align-items: center;
         height: 60px;
         padding: 15px;
-        border-bottom: 1px solid grey;
+        border-bottom: 1px solid var(--borders-color);
       }
 
       .email {
