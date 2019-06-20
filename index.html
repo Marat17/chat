@@ -205,6 +205,71 @@
   </div>
 
   <div class = 'chat_space'>
+<<<<<<< HEAD
+
+    <div class = 'scrollable'>
+
+      <ul id='messages'>
+      <li>
+        <div class="chat__item">
+
+          <div class="chat__messages">
+            <div class="chat__message">
+              <div class="timeandinterlocutor">
+                <div class = 'person'>@projecthunter</div>
+                <div>9:03</div>
+              </div>
+              <div class="chat__message-content">Hi</div>
+            </div>
+
+            <div class="chat__message">
+              <div class="timeandinterlocutor">
+                <div class="person">@projecthunter</div>
+                <div>9:04</div>
+              </div>
+              <div class="chat__message-content">What's up?</div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="chat__item chat__item--responder">
+
+          <div class="chat__messages">
+                <div class="chat__message">
+                  <div class="timeandinterlocutor">
+                    <div class="person">@Michael</div>
+                    <div>9:11</div>
+                  </div>
+                  <div class="chat__message-content">Hey</div>
+                </div>
+                <div class="chat__message">
+                  <div class="timeandinterlocutor">
+                    <div class="person">@Michael</div>
+                    <div>9:11</div>
+                  </div>
+                  <div class="chat__message-content">I am kind of busy right now, rushing to a meeting</div>
+                </div>
+                <div class="chat__message">
+                  <div class="timeandinterlocutor">
+                    <div class="person">@Michael</div>
+                    <div>9:12</div>
+                  </div>
+                  <div class="chat__message-content">I'll text u later</div>
+                </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  </div>
+  <div class="istyping">Ann is typing...</div>
+    <div class = 'messagecontainer'>
+      <div class="messageplace">
+        <i class="fas fa-cloud-upload-alt"></i>
+        <form action = ''>
+          <input id='m' type="text" placeholder="Your message..">
+        </form>
+=======
 
     <div class = 'scrollable'>
 
@@ -283,6 +348,7 @@
       <div class="messageplace">
         <i class="fas fa-cloud-upload-alt"></i>
         <input type="text" placeholder="Your message..">
+>>>>>>> d966325c9dc2a7dd08aeeb14bb38827d2104f870
         <i class="fas fa-smile"></i>
         <i class="fas fa-microphone righticon"></i>
       </div>
@@ -321,6 +387,64 @@
     </div>
   </div>
 </div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+<script>
+  $('.scrollable').scrollTop($('.scrollable')[0].scrollHeight);
+  $(function () {
+    var socket = io();
+    $('form').submit(function(e){
+      e.preventDefault(); // prevents page reloading
+      socket.emit('chat message', $('#m').val());
+      $('#m').val('');
+      return false;
+    });
+    
+    socket.on('chat message', function(msg){
+      $('#messages').append(
+        `<li>
+          <div class="chat__item chat__item--responder">
+            <div class="chat__messages">
+              <div class="chat__message">
+                <div class="timeandinterlocutor">
+                  <div class="person">@Michael</div>
+                  <div>9:11</div>
+                </div>
+                <div class="chat__message-content">${msg}</div>
+              </div>
+            </div>
+          </div>
+        </li>`
+      )
 
+      $('.scrollable').scrollTop($('.scrollable')[0].scrollHeight);
+
+      setTimeout(function() {   //calls click event after a certain time
+        $('.istyping').css('visibility', 'visible');
+      }, 3500);
+
+      setTimeout(function() {   //calls click event after a certain time
+        $('.istyping').css('visibility', 'hidden');
+
+        $('#messages').append(
+          `<li>
+            <div class="chat__item">
+
+              <div class="chat__messages">
+                <div class="chat__message">
+                  <div class="timeandinterlocutor">
+                    <div class = 'person'>@projecthunter</div>
+                    <div>9:03</div>
+                  </div>
+                  <div class="chat__message-content">I will call U in 10 minutes</div>
+                </div>
+              </div>
+            </div>
+          </li>`
+        )
+      }, 8000);
+    });
+  });
+</script>
 </body>
 </html>
